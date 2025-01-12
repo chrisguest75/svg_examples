@@ -22,3 +22,5 @@ pre-commit install --hook-type commit-msg --hook-type pre-push
 [![Repository](https://skillicons.dev/icons?i=html,tailwind)](https://skillicons.dev)
 
 ## Resources
+
+* SVG Path Editor [here](https://yqnn.github.io/svg-path-editor/)
