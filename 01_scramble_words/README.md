@@ -4,7 +4,9 @@ Create a simple SVG text printer.
 
 TODO:
 
-* load svg and randomise
+* load svg and print characters
+* css when loaded from hosted is broken
+* single step debugging
 
 ## Install
 
@@ -35,3 +37,4 @@ just host
 * SVG Exercise 12: Blockfont (WIP) [here](https://codepen.io/learosema/pen/JoPGzbr)
 * Install Tailwind CSS with Parcel [here](https://tailwindcss.com/docs/guides/parcel)
 * Vitest Next Generation Testing Framework [here](https://vitest.dev/)
+* @parcel/transformer-typescript-tsc [here](https://www.npmjs.com/package/@parcel/transformer-typescript-tsc)

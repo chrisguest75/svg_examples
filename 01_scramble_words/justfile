@@ -8,11 +8,13 @@ set dotenv-load := true
 default:
   @just -f justfile --list
 
-
 clean:
-  rm -rf ./node_modules || true
   rm -rf ./dist || true
   rm -rf ./.parcel-cache || true
+
+
+clean-all: clean
+  rm -rf ./node_modules || true
 
 
 install:
@@ -25,6 +27,11 @@ test:
   #!/usr/bin/env bash
   set -eufo pipefail
   npm run test
+
+build:
+  #!/usr/bin/env bash
+  set -eufo pipefail
+  npm run build
 
 host:
   #!/usr/bin/env bash

@@ -1,6 +1,6 @@
 // sum.test.js
 import { expect, test } from 'vitest'
-import { Scramble } from './scramble.ts'
+import { Scramble } from './scramble'
 
 test('Word gets scrambled', () => {
     // ARRANGE
