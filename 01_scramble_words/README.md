@@ -4,13 +4,11 @@ Create a simple SVG text printer.
 
 NOTES:
 
-* Not sure why vitest and parcel require different postcss configs.
+* Not sure why `vitest` and parcel require different postcss configs.
 
 TODO:
 
 * fix the manual svg copy to public in dist
-* load svg and print characters
-* css when loaded from hosted is broken
 * single step debugging https://parceljs.org/recipes/debugging/
 
 ## Install
