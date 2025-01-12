@@ -50,7 +50,7 @@ function update() {
       waitCount++;
     } else {
       wordIndex = (wordIndex + 1) % words.length;
-      scramble = new Scramble(words[wordIndex]);
+      scramble.setTargetWord(words[wordIndex]));
       waitCount = 0;
     }
   }
