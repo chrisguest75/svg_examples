@@ -2,25 +2,25 @@ import * as d3 from "d3";
 import { Scramble } from "./scramble";
 
 const words = [
-  "BRUTALIST",
-  "Minimalism",
-  "GEOMETRY",
-  "Structure",
-  "Typography",
-  "Design",
+  "BRUTALIST   ",
+  "Minimalism  ",
+  "GEOMETRY    ",
+  "Structure   ",
+  "Typography  ",
+  "Design      ",
   "Architecture",
-  "Sculpture",
-  "Concrete",
-  "Form",
-  "Function",
-  "Perspective",
-  "Symmetry",
-  "Proportion",
-  "Scale",
-  "Rhythm",
-  "Composition",
-  "Evolution",
-  "Adaptation"
+  "Sculpture   ",
+  "Concrete    ",
+  "Form        ",
+  "Function    ",
+  "Perspective ",
+  "Symmetry    ",
+  "Proportion  ",
+  "Scale       ",
+  "Rhythm      ",
+  "Composition ",
+  "Evolution   ",
+  "Adaptation  "
 ];
 let waitCount = 0;
 let wordIndex = 0;
