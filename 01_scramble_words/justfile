@@ -17,14 +17,19 @@ clean:
 
 install:
   #!/usr/bin/env bash
-  set -xeufo pipefail
+  set -eufo pipefail
   npm install
 
 
 test:
   #!/usr/bin/env bash
-  set -xeufo pipefail
+  set -eufo pipefail
   npm run test
+
+host:
+  #!/usr/bin/env bash
+  set -eufo pipefail
+  npm run start  
 
   
 watch:

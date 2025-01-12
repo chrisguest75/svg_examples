@@ -4,23 +4,34 @@ Create a simple SVG text printer.
 
 TODO:
 
-* typescript + with jest tests
 * load svg and randomise
+
+## Install
+
+Install `node_modules`
+
+```sh
+just install
+```
+
+## Test
+
+Run the unittests
+
+```sh
+just test
+```
 
 ## Run
 
-```sh
-npx parcel index.html
-```
-
-## Parcel
+Host and use live server in the `dist` folder.  
 
 ```sh
-npx parcel index.html
+just host
 ```
 
 ## Resources
 
 * SVG Exercise 12: Blockfont (WIP) [here](https://codepen.io/learosema/pen/JoPGzbr)
-* https://tailwindcss.com/docs/guides/parcel
-* https://vitest.dev/
+* Install Tailwind CSS with Parcel [here](https://tailwindcss.com/docs/guides/parcel)
+* Vitest Next Generation Testing Framework [here](https://vitest.dev/)
