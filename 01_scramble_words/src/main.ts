@@ -1,38 +1,13 @@
 import * as d3 from "d3";
-import { Scramble } from "./scramble";
+import { Words } from "./words";
 
-const words = [
-  "BRUTALIST   ",
-  "Minimalism  ",
-  "GEOMETRY    ",
-  "Structure   ",
-  "Typography  ",
-  "Design      ",
-  "Architecture",
-  "Sculpture   ",
-  "Concrete    ",
-  "Form        ",
-  "Function    ",
-  "Perspective ",
-  "Symmetry    ",
-  "Proportion  ",
-  "Scale       ",
-  "Rhythm      ",
-  "Composition ",
-  "Evolution   ",
-  "Adaptation  "
-];
-let waitCount = 0;
-let wordIndex = 0;
-
-let scramble = new Scramble(words[wordIndex]);
+const words = new Words();
 
 function initialise(filePath: string) {
   d3.xml(filePath).then((data) => {
     d3.select("#svgtext").node().append(data.documentElement);
+    setInterval(update, 30);
   });
-
-  setInterval(update, 30);
 }
 
 function update() {
@@ -44,17 +19,8 @@ function update() {
 
   svgParent.selectAll("use").remove();
 
-  scramble.moveTowardsTarget();
-  if (scramble.isAtTarget()) {
-    if (waitCount < 100) {
-      waitCount++;
-    } else {
-      wordIndex = (wordIndex + 1) % words.length;
-      scramble.setTargetWord(words[wordIndex]));
-      waitCount = 0;
-    }
-  }
-  const scrambled = scramble.currentWord;
+  const scrambled = words.update();
+
   for (let i = 0; i < scrambled.length; i++) {
     const char = scrambled[i];
     const hValue = (i * 20) % 360;

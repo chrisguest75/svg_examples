@@ -42,7 +42,7 @@ export class Scramble {
 
     public moveTowardsTarget() {
         for (let i = 0; i < this._currentWord.length; i++) {
-            const delta = Math.floor(Math.random() * 5)
+            const delta = Math.floor(Math.random() * 10)
             if (Math.abs(this._currentWord[i] - this._targetWord[i]) > delta) {
                 this._currentWord[i] += delta;
             } else {
