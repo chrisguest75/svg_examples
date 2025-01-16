@@ -8,6 +8,13 @@ set dotenv-load := true
 default:
   @just -f justfile --list
 
+
+nix:
+  #!/usr/bin/env bash
+  set -xeufo pipefail
+  nix develop --command zsh
+
+  
 clean:
   rm -rf ./dist || true
   rm -rf ./.parcel-cache || true

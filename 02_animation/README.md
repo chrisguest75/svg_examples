@@ -8,7 +8,6 @@ NOTES:
 
 TODO:
 
-* fix the manual svg copy to public in dist
 * single step debugging https://parceljs.org/recipes/debugging/
 
 ## Install
@@ -17,6 +16,9 @@ Install `node_modules`
 
 ```sh
 nvm use
+#or
+just nix
+
 just install
 ```
 
