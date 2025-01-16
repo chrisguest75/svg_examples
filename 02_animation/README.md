@@ -1,6 +1,6 @@
-# SCRAMBLE WORDS
+# SVG ANIMATION
 
-Create a simple SVG text printer.  
+Create some simple svg animations.  
 
 NOTES:
 
@@ -37,8 +37,3 @@ just host
 ```
 
 ## Resources
-
-* SVG Exercise 12: Blockfont (WIP) [here](https://codepen.io/learosema/pen/JoPGzbr)
-* Install Tailwind CSS with Parcel [here](https://tailwindcss.com/docs/guides/parcel)
-* Vitest Next Generation Testing Framework [here](https://vitest.dev/)
-* @parcel/transformer-typescript-tsc [here](https://www.npmjs.com/package/@parcel/transformer-typescript-tsc)
