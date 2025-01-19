@@ -2,6 +2,7 @@ import * as d3 from 'd3';
 import { background1 } from './background1';
 import { background2 } from './background2';
 import { background3 } from './background3';
+import { background4 } from './background4';
 
 function resize() { 
   const width = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
@@ -18,7 +19,8 @@ function redraw() {
 
   //background2({ width, height }, Math.random() * 360, Math.random() * Math.PI);
 
-  background3({ width, height });
+  //background3({ width, height });
+  background4({ width, height });
 }
 
 function initialise() {
