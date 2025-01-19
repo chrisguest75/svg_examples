@@ -16,9 +16,9 @@ function redraw() {
   //background1({ width, height }, 5);
   //background1({ width, height }, 6);
 
-  background2({ width, height }, Math.random() * 360, Math.random() * Math.PI);
+  //background2({ width, height }, Math.random() * 360, Math.random() * Math.PI);
 
-  //background3();
+  background3({ width, height });
 }
 
 function initialise() {
