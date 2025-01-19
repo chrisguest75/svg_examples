@@ -74,7 +74,7 @@ function drawPolygon(centre: Point,  points: Array<Point>, color: string) {
   ctx.fill();
 }
 
-function background2(center: Point, base: number, colour: number, startAngle: number) {
+function drawRadial(center: Point, base: number, colour: number, startAngle: number) {
 
   const outerPoints2 = polygon(base + 200, 6, startAngle);
   const outerPoints1 = polygon(base + 100, 12, startAngle);
@@ -106,23 +106,28 @@ function background2(center: Point, base: number, colour: number, startAngle: nu
   }
 }
 
+function background2(baseColour: number, baseAngle: number = 0) {
+  const center = {x: 980, y: 540}
+  drawRadial(center, 0, 10 + baseColour, baseAngle);
+  drawRadial(center, 100, 20 + baseColour, baseAngle + (Math.PI / 6));
+  drawRadial(center, 200, 30 + baseColour, baseAngle);
+  drawRadial(center, 300, 40 + baseColour, baseAngle + (Math.PI / 6));
+  drawRadial(center, 400, 50 + baseColour, baseAngle);
+  drawRadial(center, 500, 60 + baseColour, baseAngle + (Math.PI / 6));
+  drawRadial(center, 600, 70 + baseColour, baseAngle);
+  drawRadial(center, 700, 80 + baseColour, baseAngle + (Math.PI / 6));
+  drawRadial(center, 800, 90 + baseColour, baseAngle);
+  drawRadial(center, 900, 100 + baseColour, baseAngle + (Math.PI / 6));
+  drawRadial(center, 1000, 110 + baseColour, baseAngle);
+  drawRadial(center, 1100, 120 + baseColour, baseAngle + (Math.PI / 6));
+}
+
+
 function initialise() {
   //background1(5);
   //background1(6);
 
-  const center = {x: 980, y: 540}
-  background2(center, 0, 10);
-  background2(center, 100, 20, Math.PI / 6);
-  background2(center, 200, 30);
-  background2(center, 300, 40, Math.PI / 6);
-  background2(center, 400, 50);
-  background2(center, 500, 60, Math.PI / 6);
-  background2(center, 600, 70);
-  background2(center, 700, 80, Math.PI / 6);
-  background2(center, 800, 90);
-  background2(center, 900, 100, Math.PI / 6);
-  background2(center, 1000, 110);
-  background2(center, 1100, 120, Math.PI / 6);
+  background2(Math.random() * 360, Math.random() * Math.PI);
 
 }
 
