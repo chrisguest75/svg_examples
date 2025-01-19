@@ -14,18 +14,43 @@ function resize() {
 function redraw() {
   const { width, height } = resize();
   console.log(width, height);
-  //background1({ width, height }, 5);
-  //background1({ width, height }, 6);
 
-  //background2({ width, height }, Math.random() * 360, Math.random() * Math.PI);
+  const selection = d3.select('#algorithm').node().value;
+  console.log(selection);
 
-  //background3({ width, height });
-  background4({ width, height });
+  switch (selection) {
+    case 'Background1':
+      background1({ width, height }, 5);
+      //background1({ width, height }, 6);        
+      break;
+  
+    case 'Background2':
+      background2({ width, height }, Math.random() * 360, Math.random() * Math.PI);
+      break;
+
+    case 'Background3':
+      background3({ width, height });
+      break;
+
+    case 'Background4':
+      background4({ width, height });
+      break;
+
+    default:
+      background1({ width, height }, 6);        
+      break;
+  }
 }
 
 function initialise() {
   redraw();
   addEventListener("resize", (event) => redraw());
+  d3.select('#algorithm').append('option').attr('value', 'Background1').text('Background1');
+  d3.select('#algorithm').append('option').attr('value', 'Background2').text('Background2');
+  d3.select('#algorithm').append('option').attr('value', 'Background3').text('Background3');
+  d3.select('#algorithm').append('option').attr('value', 'Background4').text('Background4');
+
+  d3.select('#algorithm').on('change', () => redraw());
 }
 
 initialise();
