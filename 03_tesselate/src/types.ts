@@ -9,3 +9,8 @@ export type Point = {
     x: number, 
     y: number
 };
+
+export type Polar = {
+    ang: number, 
+    length: number
+};

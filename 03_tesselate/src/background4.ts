@@ -24,8 +24,8 @@ function drawPolygon(centre: Point,  points: Array<Point>, color: string) {
 
   ctx.beginPath();
   for (let i = 0; i < points.length; i++) {
-    const x = centre.x + points[i].x;
-    const y = centre.y + points[i].y;
+    const x = centre.x + points[i].x + Math.random() * 4 - 2;
+    const y = centre.y + points[i].y + Math.random() * 4 - 2;
     if (i === 0) {
       ctx.moveTo(x, y);
     } else {

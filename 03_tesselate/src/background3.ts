@@ -14,7 +14,7 @@ function drawSquare(ctx, topLeft: Point, dimensions: Dimensions, depth: number) 
   ctx.lineTo(x, y);
   ctx.closePath();
 
-  ctx.fillStyle = 'hsl('+ depth * 30 + ',70%, 30%)';
+  ctx.fillStyle = 'hsl('+ ((depth * 6) + 170) + ',70%, 40%)';
   ctx.fill();
   if (depth > 0) {
     const newWidth = (width / 2);
@@ -52,7 +52,7 @@ function drawSquare(ctx, topLeft: Point, dimensions: Dimensions, depth: number) 
 
 
 export function background3(dimensions: Dimensions) {
-  const canvas = d3.select('#background');
+  const canvas = d3.select('#background').attr('width', 2000).attr('height', 2000);;
   const ctx = canvas.node().getContext('2d');
 
   const { width, height } = dimensions;

@@ -3,6 +3,7 @@ import { background1 } from './background1';
 import { background2 } from './background2';
 import { background3 } from './background3';
 import { background4 } from './background4';
+import { background5 } from './background5';
 
 function resize() { 
   const width = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
@@ -36,8 +37,13 @@ function redraw() {
       background4({ width, height });
       break;
 
+    case 'Background5':
+      background5({ width, height });
+      break;
+  
     default:
-      background1({ width, height }, 6);        
+      // wip 
+      background5({ width, height });
       break;
   }
 }
@@ -49,6 +55,8 @@ function initialise() {
   d3.select('#algorithm').append('option').attr('value', 'Background2').text('Background2');
   d3.select('#algorithm').append('option').attr('value', 'Background3').text('Background3');
   d3.select('#algorithm').append('option').attr('value', 'Background4').text('Background4');
+  d3.select('#algorithm').append('option').attr('value', 'Background5').text('Background5');
+  d3.select('#algorithm').node().value = 'Background3';
 
   d3.select('#algorithm').on('change', () => redraw());
 }
