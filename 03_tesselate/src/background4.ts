@@ -54,7 +54,8 @@ export function background4(dimensions: Dimensions) {
   for (let row = 0; row < maxRows; row++) {
     for (let column = 0; column < maxColumms; column++) {
 
-      const points = polygon(boxSize + (Math.random() * 10) - 5, 4, ((Math.PI * 2)/ maxRows) * (column + (Math.random() * 10)));
+      //const points = polygon(boxSize + (Math.random() * 10) - 5, 4, ((Math.PI * 2)/ maxRows) * (column + (Math.random() * 10)));
+      const points = polygon(boxSize  + (Math.random() * 2), 4, 0);
       const center = { x: column * boxSize * 2, y: row * boxSize * 2};
       drawPolygon(center, points, 'hsl(' + (row * column) + (Math.random() * 5) + ',70%,40%)');
     }

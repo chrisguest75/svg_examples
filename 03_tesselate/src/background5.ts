@@ -49,7 +49,7 @@ function mode1(dimensions: Dimensions) {
   while (scale > 1) {
     const points = polygon(scale, 3, angle);
     const center = { x: width / 2, y: height / 2 };
-    drawPolygon(center, points, 'hsl(' + scale + ',70%,40%)');
+    drawPolygon(center, points, 'hsl(' + scale + ',70%,60%)');
     scale *= 0.877
     angle += (Math.PI * 2 / 360) * 5
   }
@@ -79,7 +79,7 @@ function drawTriangles(center: Point, color: string, length: number = 600) {
     ctx.lineTo(point.x, point.y);    
     ctx.closePath();
 
-    ctx.fillStyle = 'hsl('+ index * 30 +',40%,20%)';
+    ctx.fillStyle = 'hsl('+ index * 40 +',40%,20%)';
     ctx.fill();
     ctx.stroke();
 
@@ -97,6 +97,6 @@ export function background5(dimensions: Dimensions) {
   const { width, height } = dimensions;
 
   //mode1(dimensions);
-  drawTriangles({x: width / 2, y: height / 2 - height/2}, 'hsl(0,40%,10%)', height);
+  drawTriangles({x: width / 2, y: height / 2 - height/2}, 'hsl(0,70%,40%)', height);
 
 }

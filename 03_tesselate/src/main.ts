@@ -6,6 +6,7 @@ import { background4 } from './background4';
 import { background5 } from './background5';
 import { background6 } from './background6';
 import { background7 } from './background7';
+import { background8 } from './background8';
 
 function resize() { 
   const width = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
@@ -50,10 +51,14 @@ function redraw() {
     case 'Background7':
       background7({ width, height });
       break;
-    
-      default:
+
+    case 'Background8':
+      background8({ width, height });
+      break;
+  
+    default:
       // wip 
-      background7({ width, height });
+      background8({ width, height });
       break;
   }
 }
@@ -63,12 +68,13 @@ function initialise() {
   addEventListener("resize", (event) => redraw());
   d3.select('#algorithm').append('option').attr('value', 'Background1').text('Scales');
   d3.select('#algorithm').append('option').attr('value', 'Background2').text('Portal');
-  d3.select('#algorithm').append('option').attr('value', 'Background3').text('Background3');
+  d3.select('#algorithm').append('option').attr('value', 'Background3').text('Fractal');
   d3.select('#algorithm').append('option').attr('value', 'Background4').text('Jelly Tots Mosaic');
   d3.select('#algorithm').append('option').attr('value', 'Background5').text('Triangle');
   d3.select('#algorithm').append('option').attr('value', 'Background6').text('Lighthouse');
   d3.select('#algorithm').append('option').attr('value', 'Background7').text('Cubist Spiral');
-  d3.select('#algorithm').node().value = 'Background6';
+  d3.select('#algorithm').append('option').attr('value', 'Background8').text('Feathers');
+  d3.select('#algorithm').node().value = 'Background8';
 
   d3.select('#algorithm').on('change', () => redraw());
 }
