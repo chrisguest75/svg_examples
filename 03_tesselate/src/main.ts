@@ -5,6 +5,7 @@ import { background3 } from './background3';
 import { background4 } from './background4';
 import { background5 } from './background5';
 import { background6 } from './background6';
+import { background7 } from './background7';
 
 function resize() { 
   const width = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
@@ -46,9 +47,13 @@ function redraw() {
       background6({ width, height }, Math.random() * 360, Math.random() * Math.PI);
       break;
 
-    default:
+    case 'Background7':
+      background7({ width, height });
+      break;
+    
+      default:
       // wip 
-      background6({ width, height }, Math.random() * 360, Math.random() * Math.PI);
+      background7({ width, height });
       break;
   }
 }
@@ -62,6 +67,7 @@ function initialise() {
   d3.select('#algorithm').append('option').attr('value', 'Background4').text('Jelly Tots Mosaic');
   d3.select('#algorithm').append('option').attr('value', 'Background5').text('Triangle');
   d3.select('#algorithm').append('option').attr('value', 'Background6').text('Lighthouse');
+  d3.select('#algorithm').append('option').attr('value', 'Background7').text('Cubist Spiral');
   d3.select('#algorithm').node().value = 'Background6';
 
   d3.select('#algorithm').on('change', () => redraw());
