@@ -7,6 +7,7 @@ import { background5 } from './background5';
 import { background6 } from './background6';
 import { background7 } from './background7';
 import { background8 } from './background8';
+import { background9 } from './background9';
 
 function resize() { 
   const width = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
@@ -55,10 +56,14 @@ function redraw() {
     case 'Background8':
       background8({ width, height });
       break;
-  
+
+    case 'Background9':
+      background9({ width, height });
+      break;
+        
     default:
       // wip 
-      background8({ width, height });
+      background9({ width, height });
       break;
   }
 }
@@ -74,6 +79,7 @@ function initialise() {
   d3.select('#algorithm').append('option').attr('value', 'Background6').text('Lighthouse');
   d3.select('#algorithm').append('option').attr('value', 'Background7').text('Cubist Spiral');
   d3.select('#algorithm').append('option').attr('value', 'Background8').text('Feathers');
+  d3.select('#algorithm').append('option').attr('value', 'Background9').text('Broken Truchet');
   d3.select('#algorithm').node().value = 'Background8';
 
   d3.select('#algorithm').on('change', () => redraw());
