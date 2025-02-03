@@ -17,6 +17,9 @@ code --install-extension bradlc.vscode-tailwindcss
 
 ```sh
 nvm use
+#or
+just nix
+
 just install
 
 just host
